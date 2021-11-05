@@ -16,16 +16,16 @@ https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK
 
 he usado las siguientes etiquetas por orden :
 
-- <header>
-- <h1>
-- <p>
-- <span>
-- <br>
-- <div>
-- <section>
-- <img>
-- <footer>
-- <a>
+- header
+- h1
+- p
+- span
+- br
+- div
+- section
+- img
+- footer
+- a
 
 ## Media query
 
@@ -52,5 +52,5 @@ He tenido problemas que son los siguientes :
 
   ## Enlaces
 
-https://www.frontendmentor.io/solutions/html-css-js-W0gkDjzcZ
-https://acedaw.github.io/gb-pages/
+  - https://www.frontendmentor.io/solutions/html-css-js-W0gkDjzcZ
+  - https://acedaw.github.io/gb-pages/
