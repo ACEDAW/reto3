@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: hsl(225,9%,32%);
+}
+body
+{
+background-color: hsl(0, 0%, 98%);
+font-size: 15px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+.tittle
+{
+    text-align: center;
+    font-weight: 200;
+}
+
+.t2
+{
+    font-weight: 600;
+}
+
+.description
+{
+    text-align: center;
+    max-width: 29rem;
+    color:  hsl(229, 6%, 66%) ;
+    font-size:small;
+
+}
+
+.secciones
+{
+    margin-top: 2rem;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 2rem 2rem; 
+    grid-template-areas: 
+      ". caja1 ."
+      "caja2 caja1 caja3"
+      "caja2 caja1 caja3"
+      "caja2 caja4 caja3"
+      "caja2 caja4 caja3"; 
+}
+
+
+.caja1 , .caja2, .caja3 , .caja4
+{
+    display: inline-block;
+    background-color: white;
+    border-radius: 0.3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 14rem;
+    box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 27%);
+}
+
+.caja1{grid-area: caja1;}
+.caja2{grid-area:caja2;}
+.caja3{grid-area:caja3;}
+.caja4{grid-area: caja4;}
+.rojo
+{border-top:3px solid hsl(0, 78%, 62%);}
+.verde
+{border-top:3px solid hsl(180, 62%, 55%);}
+.amarillo{border-top:3px solid hsl(34, 97%, 64%);}
+.azul{border-top:3px solid hsl(212, 86%, 64%);}
+
+.titulo
+{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.imagen
+{
+    float: right;
+}
+
+
+.desc
+{
+    width: 15rem;
+    color:  hsl(229, 6%, 66%) ;
+    font-size: 0.8rem;
+    margin-bottom: 17%;
+
+}
+
+.attribution { font-size: 11px; text-align: center; margin-top:50px ; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 300px)  {
+
+    
+    .tittle
+    {
+        text-align: center;
+        font-weight: 200;
+        font-size: 1.7rem;
+    }
+
+    .t2
+    {
+        font-weight: 600;
+    }
+
+    .description
+    {
+        text-align: center;
+        color:  hsl(229, 6%, 66%) ;
+        font-size:smaller;
+        margin :15px;
+    }
+
+    .secciones
+    {
+        margin-top: 2rem;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 2rem 2rem; 
+        grid-template-areas: 
+          ". caja2 ."
+          ". caja1 ."
+          ". caja3 ."
+          ". caja4 ."; 
+    }
+  }
+
+  @media only screen and (min-width:301px) and (max-width:999px)
+  {
+    .tittle
+    {
+        text-align: center;
+        font-weight: 200;
+        font-size: 1.7rem;
+    }
+
+    .t2
+    {
+        font-weight: 600;
+    }
+
+    .description
+    {
+        text-align: center;
+        color:  hsl(229, 6%, 66%) ;
+        font-size:smaller;
+        margin :15px;
+    }
+
+    .secciones
+    {
+        margin-top: 2rem;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 2rem 2rem; 
+        grid-template-areas: 
+          ". caja2 ."
+          ". caja1 ."
+          ". caja3 ."
+          ". caja4 ."; 
+    }
+  }
+
+
+  }
