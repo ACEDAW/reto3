@@ -1,25 +1,66 @@
-const cabecera = document.getElementById('header');
-let plantilla = document.createElement('section');
-plantilla.classList.add('secciones')
-cabecera.insertAdjacentElement('afterend',plantilla);
+const footer = document.getElementById('footer');
+const section = document.createElement('section');
+section.classList.add('secciones');
 
-function template(caja,color,titulo,desc,imagen)
+const team = 
 {
-    return(
-    `<div class="${caja} ${color}">
-        <h1 class="titulo">${titulo}</h1>
-        <p class="desc">${desc}</p>
-        <img class="imagen" src="${imagen}"></img>
-    </div>`
-    );
-
+    caja:"caja1",
+    color:"rojo",
+    titulo:"Team Builder",
+    desc:"  Scans our talent network to create the optimal team for your project",
+    img:"./images/icon-team-builder.svg",
 }
 
-let team=template("caja1","rojo","Team Builder","  Scans our talent network to create the optimal team for your project","./images/icon-team-builder.svg");
-let supervisor=template("caja2","verde","Supervisor","Monitors activity to identify project roadblocks","./images/icon-supervisor.svg");
-let karma=template("caja4","amarillo","Karma","  Regularly evaluates our talent to ensure quality","./images/icon-karma.svg");
-let calculator=template("caja3","azul","Calculator","Uses data from past projects to provide better delivery estimates","./images/icon-calculator.svg");
-plantilla.insertAdjacentHTML('afterbegin',team);
-plantilla.insertAdjacentHTML('beforeend',supervisor);
-plantilla.insertAdjacentHTML('beforeend',karma);
-plantilla.insertAdjacentHTML('beforeend',calculator);
+
+const supervisor= 
+{
+    caja:"caja2",
+    color:"verde",
+    titulo:"Supervisor",
+    desc:" Monitors activity to identify project roadblocks",
+    img:"./images/icon-supervisor.svg",
+}
+
+const karma = 
+{
+    caja:"caja4",
+    color:"amarillo",
+    titulo:"Karma",
+    desc:"Regularly evaluates our talent to ensure quality",
+    img:"./images/icon-karma.svg",
+}
+
+const calculator= 
+{
+    caja:"caja3",
+    color:"azul",
+    titulo:"Calculator",
+    desc:"Uses data from past projects to provide better delivery estimates",
+    img:"./images/icon-calculator.svg",
+}
+
+
+function crearTemplate(servicio)
+{
+    
+    const template= document.getElementById("template").content;
+    const clonTemplate = template.cloneNode(true);// true  toda la estructura del template
+    clonTemplate.querySelector('div').classList.add(`${servicio.caja}`,`${servicio.color}`);
+    clonTemplate.querySelector('h1').classList.add("titulo");
+    clonTemplate.querySelector('h1').innerText = `${servicio.titulo}`;
+    clonTemplate.querySelector('p').classList.add("desc");
+    clonTemplate.querySelector('p').innerText=`${servicio.desc}`;
+    clonTemplate.querySelector('img').classList.add("imagen"); 
+    clonTemplate.querySelector('img').src=`${servicio.img}`; 
+    section.appendChild(clonTemplate);
+    document.body.appendChild(section);
+    document.body.insertAdjacentElement("beforeend",footer);
+    
+     
+}
+
+crearTemplate(team);
+crearTemplate(supervisor);
+crearTemplate(karma);
+crearTemplate(calculator);
+
